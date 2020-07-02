@@ -1,0 +1,160 @@
+<br><br><br><br>
+<br><br>
+
+
+<div class="container">
+  <span *ngFor="let item of counts;let i = index">
+    <span class="circle-desc" [class.circle-desc-active]="orderStatus == item">{{ item }}</span>
+    <span class="circles" [class.active]="orderStatus == item"></span>
+    <span class="bar" *ngIf="(i != counts.length-1)"></span>
+  </span>
+  </div>
+
+
+
+
+  <div class="wrapper">
+    <div class="margin-area">
+      <div class="dot one">1</div>
+      <div class="dot two">2</div>
+      <div class="dot three">3</div>
+      
+      <div class="progress-bar first"></div>
+      <div class="progress-bar second"></div>
+      
+      <div class="message message-1">Shipped</div> 
+      
+ 
+      <div class="message message-2">Out for delivery</div>
+      <div class="message message-3">Delivered</div>
+      
+    </div>
+    </div>
+    
+  
+    
+<div>
+  <mat-card  [style.width.px]=500 [style.border]="'#000'" >
+    <mat-card-header >
+      <img style="margin-left:-250px;" width=40px; height= 40px; src="https://img.icons8.com/dusk/64/000000/checked-truck.png">
+      <mat-card-title style="margin-left: 70px;" ><b>Order Delivered</b></mat-card-title>
+      
+      
+    </mat-card-header>
+    <!-- <mat-card-content>
+      <p>
+      ibbzdisb
+      </p>
+    </mat-card-content> -->
+  </mat-card>
+</div>
+<br>
+<div>
+
+  <mat-card  [style.width.px]=500 [style.border]="'#000'" >
+    
+    <mat-card-header >
+      <img style="margin-left:-290px;" width =50px; height= 50px; src="https://img.icons8.com/plasticine/100/000000/deliver-food.png">
+      <mat-card-title style="margin-left: 70px;">Order out for delivery</mat-card-title>
+      
+    </mat-card-header>
+  
+  </mat-card>
+</div>
+<br>
+<div>
+
+  <mat-card  [style.width.px]=500 [style.border]="'#000'">
+    <mat-card-header >
+      <mat-card-title>Order has been shipped</mat-card-title>
+      
+    </mat-card-header>
+
+  </mat-card>
+</div>
+<br><br><br>
+
+<h3 class="time">ARRIVING IN <br><center><h2 style="color:white"><b>3 days</b></h2></center> </h3>
+
+
+
+
+
+
+<form (ngSubmit)="showMap()">
+    <br>
+    <div style="margin-left: 1%;">
+        <label style="margin-bottom: 15px;" for="exampleForm2">C-name : </label>
+        <input type="text" style="width: 20%;  margin-bottom: 1%;" #inputname  class="form-control">
+        <button type="submit" id="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-lat='21.03' data-lng='105.85'>Track order</button>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style=" height: 520px;">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2 class="modal-title" id="myModalLabel"><b>Track Your Order</b></h2><span>Delivery Status : <span #deliverystatus> </span> </span>
+            </div>
+            <div class="modal-body">
+            
+            <div class="row">
+                <div class="col-md-12 modal_body_map">
+                <div class="location-map" id="location-map">
+                    <agm-map style="width: 100%; height: 380px; margin-left: 2%; margin-top: 0%;" [latitude]="lat" [longitude]="lng" [zoom]="zoom">  
+                        <agm-marker  [latitude]="lat" [longitude]="lng"  [animation]="'BOUNCE'"  [iconUrl]="clientIcon"></agm-marker>
+                        <agm-marker  [latitude]="driverLat" [longitude]="driverLong" [animation]="'DROP'"  [iconUrl]="driverIcon"></agm-marker>  
+                    </agm-map>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 modal_body_end">
+                
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+<form (ngSubmit)="showMap()">
+    <br>
+    <div style="margin-left: 1%;">
+        <label style="margin-bottom: 15px;" for="exampleForm2">Client-name : </label>
+        <input type="text" style="width: 20%;  margin-bottom: 1%;" #inputname  class="form-control">
+        <button type="submit" id="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" data-lat='21.03' data-lng='105.85'>Track order</button>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style=" height: 520px;">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2 class="modal-title" id="myModalLabel"><b>Track Your Order</b></h2><span>Delivery Status : <span #deliverystatus> </span> </span>
+            </div>
+            <div class="modal-body">
+            
+            <div class="row">
+                <div class="col-md-12 modal_body_map">
+                <div class="location-map" id="location-map">
+                    <agm-map style="width: 100%; height: 380px; margin-left: 2%; margin-top: 0%;" [latitude]="lat" [longitude]="lng" [zoom]="zoom">  
+                        <agm-marker  [latitude]="lat" [longitude]="lng"  [animation]="'BOUNCE'"  [iconUrl]="clientIcon"></agm-marker>
+                        <agm-marker  [latitude]="driverLat" [longitude]="driverLong" [animation]="'DROP'"  [iconUrl]="driverIcon"></agm-marker>  
+                    </agm-map>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 modal_body_end">
+                
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</form>

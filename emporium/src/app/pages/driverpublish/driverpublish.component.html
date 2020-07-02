@@ -1,0 +1,20 @@
+<p>driverpublish works!</p>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Driver Side Page</a>
+      </div>
+    </div>
+  </nav>
+  <div style="margin-left: 1%;">
+    <label style="margin-bottom: 15px;" for="exampleForm2">Driver Name : </label>
+    <input [(ngModel)]="drivname" type="text" style="width: 20%;  margin-bottom: 1%;" id="driverName"  class="form-control">
+ </div>
+ <div>
+    <input type="button" class="btn btn-primary" style="margin-left: 1%;" value="Reached Seller's House" (click)="statusupdate('reached seller house')">
+    <input type="button" class="btn btn-primary" value="Order Picked" (click)="statusupdate('Order Picked ')">
+    <input type="button" class="btn btn-primary" value="shipped"  (click)="statusupdate('Shipped')"> 
+    <input type="button" class="btn btn-primary" value="out for delivery"  (click)="statusupdate('Out for Delivery')"> 
+    <input type="button" class="btn btn-primary" value="delivered"  (click)="statusupdate('Delivered')"> 
+   </div>
+<button type="submit" (click)="sub()" id="submit"> <h1>Submit</h1></button>

@@ -1,0 +1,235 @@
+.mat-card.product-image {
+    padding: 6px;
+    text-align: center;
+    button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 99;
+    }
+    img{
+        max-width: 50%;
+    }
+    .mat-chip-list{
+        position: absolute;
+        top: 10px; 
+        left: 10px;
+        pointer-events: none;
+    }
+}
+
+.small-carousel{
+    margin-top: 8px;
+    .swiper-container{
+        padding: 2px;
+        .swiper-slide{
+            text-align: center;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+    .swiper-button-next.swiper-button-disabled, 
+    .swiper-button-prev.swiper-button-disabled{
+        opacity: 0;
+    }
+    .swiper-button-prev{
+        left: -10px;
+    }
+    .swiper-button-next{
+        right: -10px;
+    }
+}
+
+.mat-card.zoom-viewer{
+    position: absolute;
+    display: none;
+    background-repeat: no-repeat;
+    padding: 8px;
+    z-index: 99;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+
+.details button{
+    padding:0;
+    min-width: 36px;
+    margin-left: 6px;
+}
+
+.mat-list.reviews{
+    .mat-list-item .mat-list-avatar.review-author{
+        width: 80px;
+        height: 80px;
+    }
+    .mat-list-item .mat-line.text{
+        white-space: unset;
+        font-style: italic;
+        margin: 10px 0;
+    }
+}
+.full-desc{
+    padding: 30px 40px;
+}
+
+
+.button {
+    background-color: #689f38; /* Green */
+    border: none;
+    color: white;
+    padding: 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 21px;
+    cursor: pointer;
+  }   
+
+.button1 {
+    border-radius: 12px;
+    width: 130px;
+  }
+
+  .mat-header{
+display: flex;
+overflow: hidden;
+position: relative;
+  }
+  
+  
+
+@media (min-width: 1280px) {  
+    .mat-card.product-image img{
+        cursor: zoom-in;
+        // cursor:url('../../../../assets/images/others/zoom.svg') 10 10, zoom-in;
+    }
+}
+
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: -23%;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin-left: -30px;
+    width: 40px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .value-button:hover {
+    cursor: pointer;
+  }
+  
+  form #decrease {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  form #increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  input#number {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 11px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 35%;
+    font-size: 16px;
+    padding: 5px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-left: 65%;
+  }
+
+
+  #searchbar{
+    margin-left: 90%;
+    margin-top: 3%;
+  }
